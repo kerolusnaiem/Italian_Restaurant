@@ -75,7 +75,7 @@ body {
      /* Start Headr  */
  header {
     height : 100vh;
-    background : url(images/home_bg.jpeg) no-repeat center center/cover;
+    background : url(../images/home_bg.jpeg) no-repeat center center/cover;
     position : relative;
  }    
 
@@ -221,7 +221,7 @@ body {
     height : 80vh;
     display : flex;
     justify-content : center;
-    background : url(images/offer-background.jpg) center center/cover fixed;
+    background : url(../images/offer-background.jpg) center center/cover fixed;
 }
 
 #offers .title h2 {
@@ -336,7 +336,7 @@ body {
            /* Start Daytime  */
 
 #daytime {
-    background : url(images/daytime_bg.jpeg) no-repeat center center/cover fixed;
+    background : url(../images/daytime_bg.jpeg) no-repeat center center/cover fixed;
     color : #fff;
     text-align : center;
 }          
@@ -362,7 +362,7 @@ body {
             /* Start Gallery  */
 
 #gallery {
-    background : url(images/offer-background.jpg) no-repeat center center/cover ;
+    background : url(../images/offer-background.jpg) no-repeat center center/cover ;
     padding : 8rem 0 6rem;
 }
 
@@ -524,4 +524,173 @@ form .btn:hover {
      /* End Footer  */
 
     
-     }
+     /* ========== Responsive Design ========== */
+
+/* الموبايل (لحد 768px) */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  #navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #navbar img {
+    margin: 0;
+    width: 70px;
+  }
+
+  #navbar nav ul {
+    flex-direction: column;
+    margin: 10px 0 0;
+    padding: 0;
+  }
+
+  #navbar nav ul li a {
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  /* Content */
+  header .content h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  header .content p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* About */
+  #about {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #about .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .about-content p {
+    margin: 0 0 20px;
+  }
+
+  #about .about-content img {
+    width: 90%;
+    box-shadow: none;
+  }
+
+  /* Offers */
+  #offers {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #offers .offers-items {
+    flex-direction: column;
+  }
+
+  #offers .offers-items div {
+    margin-bottom: 20px;
+  }
+
+  /* Menu */
+  #menu .menu-items {
+    flex-direction: column;
+  }
+
+  #menu .menu-items .menu-item {
+    flex-direction: column;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  #menu .menu-items .menu-item img {
+    margin: 0 0 15px;
+  }
+
+  /* Daytime */
+  #daytime .daytime-items {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .daytime-item {
+    margin-bottom: 20px;
+  }
+
+  /* Gallery */
+  #gallery .img-gallery {
+    flex-direction: column;
+  }
+
+  #gallery .img-gallery img {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  /* Contact */
+  #contact .contact-content {
+    flex-direction: column;
+  }
+
+  #contact .contact-content .contact-info,
+  form {
+    width: 100%;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+}
+
+
+/* التابلت (769px لحد 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  #navbar nav ul {
+    gap: 15px;
+  }
+
+  #about .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #offers .offers-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #offers .offers-items > div {
+    flex: 1 1 45%;
+    margin: 15px;
+  }
+
+  #menu .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #gallery .img-gallery {
+    justify-content: center;
+  }
+
+  #gallery .img-gallery img {
+    max-width: 45%;
+  }
+
+  #contact .contact-content {
+    flex-direction: column;
+  }
+
+  #contact .contact-content .contact-info,
+  form {
+    width: 100%;
+  }
+}
